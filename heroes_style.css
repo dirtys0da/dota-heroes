@@ -6,9 +6,9 @@ body {
     color: rgb(255, 255, 255);
     margin-left: 20px;
   }
-b {
-  color: white;
-}
+  b, strong {
+    color: rgb(255, 255, 255);
+    }
   th, td {
     border: 1px solid black;
   }

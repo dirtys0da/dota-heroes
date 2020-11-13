@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="heroes.xsl" type="text/xsl"?>
+<!-- code by Ignacio Macam Jr. -->
+<!-- inline DTD start -->
+<!DOCTYPE heroes [
+<!ELEMENT heroes (hero)*>
+<!-- heroes attributes xmlns and xsi -->
+<!ATTLIST heroes xmlns:xsi CDATA "http://www.w3.org/2001/XMLSchema-instance">
+<!ATTLIST heroes xsi:noNamespaceSchemaLocation CDATA "http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- parent element with child elements start-->
+<!ELEMENT hero (hero_name*, hero_type, skill*, hero_gender, hero_weapon, hero_element, is_undead, hero_attack_range, hero_release_date, hero_description)>
+<!-- parent element with child elements end-->
+
+<!-- 1st child element -->
+<!ELEMENT hero_name (#PCDATA)>
+
+<!-- hero_name attributes version dota 1 and dota 2 start -->
+<!ATTLIST hero_name version CDATA "dota 2.2">
+<!ATTLIST hero_name version CDATA "dota 2.1">
+<!ATTLIST hero_name version CDATA "dota 1">
+<!-- attributes version dota 1 and dota 2 end -->
+
+<!-- 2nd child element -->
+<!ELEMENT hero_type (#PCDATA)>
+<!-- 3rd child element -->
+<!ELEMENT skill (#PCDATA)>
+
+<!-- attributes skill mode passive and active start -->
+<!ATTLIST skill mode CDATA "active">
+<!ATTLIST skill mode CDATA "passive">
+<!-- attributes skill mode passive and active end -->
+
+<!-- 4th child element -->
+<!ELEMENT hero_gender (#PCDATA)>
+<!-- 5th child element -->
+<!ELEMENT hero_weapon (#PCDATA)>
+<!-- 6th child element -->
+<!ELEMENT hero_element (#PCDATA)>
+<!-- 7th child element -->
+<!ELEMENT is_undead (#PCDATA)>
+<!-- 8th child element -->
+<!ELEMENT hero_attack_range (#PCDATA)>
+<!-- 9th child element -->
+<!ELEMENT hero_release_date (#PCDATA)>
+<!-- 10th child element -->
+<!ELEMENT hero_description (#PCDATA)>
+]>
+<!-- inline DTD end -->
+
+<!-- root heroes start -->
+
+<heroes
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="heroes.xsd">
+	<hero>
+		<!-- hero 1 start  -->
+		<!-- name repeating -->
+		<hero_name version="dota 2.2">Ember Spirit</hero_name>
+		<hero_name version="dota 1">Xin</hero_name>
+		<!-- name repeating end -->
+		<hero_type>Agility</hero_type>
+		<!-- skill repeating -->
+		<skill mode="active">4</skill>
+		<skill mode="passive">0</skill>
+		<!-- skill repeating end -->
+		<hero_gender>Male</hero_gender>
+		<hero_weapon>Dual Sword</hero_weapon>
+		<hero_element>Fire</hero_element>
+		<is_undead>false</is_undead>
+		<hero_attack_range>Melee</hero_attack_range>
+		<hero_release_date>12-24-2011</hero_release_date>
+		<hero_description>Xin, the Ember Spirit, is a highly mobile and versatile melee agility hero whose abilities make him a slippery foe who can dance around his enemies at will. His skill set allows for aggressive assaults on other heroes, as he can engage on them from long range using Sleight of Fist and tie them down with Searing Chains. His Flame Guard ability deals damage in a small area around him while shielding him from magic nukes, making him a force to be reckoned with by enemy casters. Finally, his Fire Remnant spell enables him to engage, escape, or move instantaneously around the map, allowing him to appear where the enemy least expects and disappear just as quickly.</hero_description>
+		<!-- hero 1 end  -->
+	</hero>
+	<hero>
+		<!-- hero 2 start -->
+		<!-- name repeating -->
+		<hero_name version="dota 2.2">Invoker</hero_name>
+		<hero_name version="dota 2.1">Carl</hero_name>
+		<hero_name version="dota 1">Kael</hero_name>
+		<!-- name repeating end -->
+		<hero_type>Intelligence</hero_type>
+		<!-- skill repeating -->
+		<skill mode="active">14</skill>
+		<skill mode="passive">0</skill>
+		<!-- skill repeating end -->
+		<hero_gender>Male</hero_gender>
+		<hero_weapon>None</hero_weapon>
+		<hero_element>Fire</hero_element>
+		<is_undead>false</is_undead>
+		<hero_attack_range>Ranged</hero_attack_range>
+		<hero_release_date>06-06-2005</hero_release_date>
+		<hero_description>Carl, the Invoker, is a ranged intelligence hero who is very difficult to master. He is unique in that he possesses a total of 14 abilities in his arsenal; three of them - Quas, Wex, and Exort - are reagents and one is his special ultimate Invoke.</hero_description>
+		<!-- hero 2 end -->
+	</hero>
+	<hero>
+		<!-- hero 3 start -->
+		<!-- name repeating -->
+		<hero_name version="dota 2.2">Weaver</hero_name>
+		<hero_name version="dota 2.1">Skitskurr</hero_name>
+		<hero_name version="dota 1">Nerubian weaver</hero_name>
+		<!-- name repeating end -->
+		<hero_type>Agility</hero_type>
+		<!-- skill repeating -->
+		<skill mode="active">3</skill>
+		<skill mode="passive">1</skill>
+		<!-- skill repeating end -->
+		<hero_gender>Undefined</hero_gender>
+		<hero_weapon>Swarm of ants</hero_weapon>
+		<hero_element>None</hero_element>
+		<is_undead>false</is_undead>
+		<hero_attack_range>Ranged</hero_attack_range>
+		<hero_release_date>03-01-2005</hero_release_date>
+		<hero_description>Skitskurr, the Weaver, is a ranged agility hero, renowned for being one of the hardest heroes in the game to properly lock down and kill, despite his extreme fragility. This is mainly due to his low-cooldown Shukuchi ability, which provides him both max movement speed and invisibility when used, making him highly effective at chasing enemies as well as escaping from battle.</hero_description>
+		<!-- hero 3 end -->
+	</hero>
+</heroes>
+<!-- root heroes end -->

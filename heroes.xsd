@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- code by Ignacio Macam jr. -->
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="heroes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="hero" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<!-- element hero_name code is linked hero_name_type located at the bottom -->
+							<xs:element name="hero_name" type="hero_name_type" minOccurs="0" maxOccurs="unbounded"/>
+							<!-- element name end -->
+							<xs:element name="hero_type">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Agility"/>
+										<xs:enumeration value="Strength"/>
+										<xs:enumeration value="Intelligence"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<!-- element skill code is linked skill_mode_type located at the bottom -->
+							<xs:element name="skill" type="skill_mode_type" minOccurs="0" maxOccurs="2"/>
+							<!-- element skill end -->
+							<xs:element name="hero_gender" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Male"/>
+										<xs:enumeration value="Female"/>
+										<xs:enumeration value="Undefined"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="hero_weapon" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="60"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="hero_element" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Ice"/>
+										<xs:enumeration value="Fire"/>
+										<xs:enumeration value="Electric"/>
+										<xs:enumeration value="Wind"/>
+										<xs:enumeration value="Earth"/>
+										<xs:enumeration value="Water"/>
+										<xs:enumeration value="Light"/>
+										<xs:enumeration value="Darkness"/>
+										<xs:enumeration value="Space"/>
+										<xs:enumeration value="Undefined"/>
+										<xs:enumeration value="None"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="is_undead" type="xs:boolean" minOccurs="0"/>
+							<xs:element name="hero_attack_range" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Ranged"/>
+										<xs:enumeration value="Melee"/>
+										<xs:enumeration value="Can be modified"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="hero_release_date" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])-(19|20)\d\d"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="hero_description" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="1024"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+
+<!-- complextype with attributes for hero_name version, type string start -->
+	<xs:complexType name="hero_name_type">
+        <xs:simpleContent>
+            <xs:restriction base="name_type">
+                <xs:maxLength value="60"/>
+            </xs:restriction>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="name_type">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="version" type="xs:string" />
+            </xs:extension>
+        </xs:simpleContent>
+	</xs:complexType>
+<!-- complextype with attributes for hero_name version end -->
+
+<!-- complextype with attributes for skill mode, type integer start -->
+	<xs:complexType name="skill_mode_type">
+		<xs:simpleContent>
+			<xs:restriction base="mode_type">
+				<xs:maxInclusive value="60"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="mode_type">
+		<xs:simpleContent>
+			<xs:extension base="xs:integer">
+				<xs:attribute name="mode" type="xs:string" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+<!-- complextype with attributes for skill mode end -->
+</xs:schema>

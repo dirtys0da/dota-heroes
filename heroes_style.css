@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(43, 43, 43);
+  }
+  
+  h1 {
+    color: rgb(255, 255, 255);
+    margin-left: 20px;
+  }
+
+  th, td {
+    border: 1px solid black;
+  }
+  
+  th {
+    background-color: rgb(82, 82, 82);
+    color: white;
+  }
+
+  td {
+    background-color: rgb(185, 185, 185);
+  }

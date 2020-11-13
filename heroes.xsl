@@ -1,17 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- code by Ignacio Macam Jr. -->
+
 <xsl:stylesheet version="1.0" 
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-
     <!-- forward slash (/) indicates that it should first look into the root element of our xml file which is "heroes"-->
     <xsl:template match="/">
         <html>
             <head>
+                <link rel="stylesheet" type="text/css" href="heroes_style.css" />
                 <title>Heroes of Dota</title>
             </head>
             <body>
                 <h1>List of Dota Heroes</h1>
-                <table style="width:100%">
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Alternate Name 1</th>
+                        <th>Alternate Name 2</th>
+                        <th>Type</th>
+                        <th>Active Skill</th>
+                        <th>Passive Skill</th>
+                        <th>Gender</th>
+                        <th>Weapon</th>
+                        <th>Element</th>
+                        <th>Undead</th>
+                        <th>Attack Range</th>
+                        <th>Description</th>
+                    </tr>
+
                     <xsl:for-each select="/heroes/hero">
+                    <xsl:sort select="hero_name[1]"/>
                     <tr>
                         <td><xsl:value-of select="hero_name[1]"/></td>
                         <td><xsl:value-of select="hero_name[2]"/></td>
@@ -31,6 +49,5 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                 </table>
             </body>
         </html>
-
     </xsl:template>
 </xsl:stylesheet>

@@ -16,9 +16,9 @@
 <!ELEMENT hero_name (#PCDATA)>
 
 <!-- hero_name attributes version dota 1 and dota 2 start -->
-<!ATTLIST hero_name version CDATA "dota 2.2">
-<!ATTLIST hero_name version CDATA "dota 2.1">
-<!ATTLIST hero_name version CDATA "dota 1">
+<!ATTLIST hero_name version CDATA "dota_2-2">
+<!ATTLIST hero_name version CDATA "dota_2-1">
+<!ATTLIST hero_name version CDATA "dota_1">
 <!-- attributes version dota 1 and dota 2 end -->
 
 <!-- 2nd child element -->
@@ -56,8 +56,9 @@
 	<hero>
 		<!-- hero 1 start  -->
 		<!-- name repeating -->
-		<hero_name version="dota 2.2">Ember Spirit</hero_name>
-		<hero_name version="dota 1">Xin</hero_name>
+		<hero_name version="dota_2-2">Ember Spirit</hero_name>
+		<hero_name version="dota_2-1">Lore</hero_name>
+		<hero_name version="dota_1">Xin</hero_name>
 		<!-- name repeating end -->
 		<hero_type>Agility</hero_type>
 		<!-- skill repeating -->
@@ -76,9 +77,9 @@
 	<hero>
 		<!-- hero 2 start -->
 		<!-- name repeating -->
-		<hero_name version="dota 2.2">Invoker</hero_name>
-		<hero_name version="dota 2.1">Carl</hero_name>
-		<hero_name version="dota 1">Kael</hero_name>
+		<hero_name version="dota_2-2">Invoker</hero_name>
+		<hero_name version="dota_2-1">Carl</hero_name>
+		<hero_name version="dota_1">Kael</hero_name>
 		<!-- name repeating end -->
 		<hero_type>Intelligence</hero_type>
 		<!-- skill repeating -->
@@ -97,9 +98,9 @@
 	<hero>
 		<!-- hero 3 start -->
 		<!-- name repeating -->
-		<hero_name version="dota 2.2">Weaver</hero_name>
-		<hero_name version="dota 2.1">Skitskurr</hero_name>
-		<hero_name version="dota 1">Nerubian weaver</hero_name>
+		<hero_name version="dota_2-2">Weaver</hero_name>
+		<hero_name version="dota_2-1">Skitskurr</hero_name>
+		<hero_name version="dota_1">Nerubian weaver</hero_name>
 		<!-- name repeating end -->
 		<hero_type>Agility</hero_type>
 		<!-- skill repeating -->

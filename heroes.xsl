@@ -12,6 +12,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             </head>
             <body>
                 <h1>List of Dota Heroes</h1>
+                <b>Selected Heroes: <xsl:value-of select="/heroes/hero/hero_name[1]"/></b>
                 <table>
                     <tr>
                         <th>Name</th>
@@ -25,6 +26,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <th>Element</th>
                         <th>Undead</th>
                         <th>Attack Range</th>
+                        <th>Release Date</th>                   
                         <th>Description</th>
                     </tr>
 

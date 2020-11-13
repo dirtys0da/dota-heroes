@@ -1,102 +1,12 @@
-<!DOCTYPE html
-  PUBLIC "XSLT-compat">
-<html>
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <link rel="stylesheet" type="text/css" href="heroes_style.css">
-      <title>Heroes of Dota</title>
-   </head>
-   <body>
-      <h5><?php
-         $file = 'heroes.xml';
-         $schema = 'heroes.xsd';
-         $ab = new DOMDocument;
-         $ab->load($file);
-   
-         if($ab->schemaValidate($schema)){
-            print "$file is valid.\n";
-         }else{
-            print "$file is invalid.\n";
-         }
-         ?>
-        </h5>
-      <h1>List of Dota Heroes</h1><b>Selected Heroes: Ember Spirit Invoker Weaver</b><table>
-         <tr>
-            <th>Name</th>
-            <th>Alternate Name 1</th>
-            <th>Alternate Name 2</th>
-            <th>Type</th>
-            <th>Active Skill</th>
-            <th>Passive Skill</th>
-            <th>Gender</th>
-            <th>Weapon</th>
-            <th>Element</th>
-            <th>Undead</th>
-            <th>Attack Range</th>
-            <th>Release Date</th>
-            <th>Description</th>
-         </tr>
-         <tr>
-            <td>Ember Spirit</td>
-            <td>Lore</td>
-            <td>Xin</td>
-            <td>Agility</td>
-            <td>4</td>
-            <td>0</td>
-            <td>Male</td>
-            <td>Dual Sword</td>
-            <td>Fire</td>
-            <td>false</td>
-            <td>Melee</td>
-            <td>12-24-2011</td>
-            <td>Xin, the Ember Spirit, is a highly mobile and versatile melee agility hero whose abilities
-               make him a slippery foe who can dance around his enemies at will. His skill set allows
-               for aggressive assaults on other heroes, as he can engage on them from long range
-               using Sleight of Fist and tie them down with Searing Chains. His Flame Guard ability
-               deals damage in a small area around him while shielding him from magic nukes, making
-               him a force to be reckoned with by enemy casters. Finally, his Fire Remnant spell
-               enables him to engage, escape, or move instantaneously around the map, allowing him
-               to appear where the enemy least expects and disappear just as quickly.
-            </td>
-         </tr>
-         <tr>
-            <td>Invoker</td>
-            <td>Carl</td>
-            <td>Kael</td>
-            <td>Intelligence</td>
-            <td>14</td>
-            <td>0</td>
-            <td>Male</td>
-            <td>None</td>
-            <td>Fire</td>
-            <td>false</td>
-            <td>Ranged</td>
-            <td>06-06-2005</td>
-            <td>Carl, the Invoker, is a ranged intelligence hero who is very difficult to master.
-               He is unique in that he possesses a total of 14 abilities in his arsenal; three of
-               them - Quas, Wex, and Exort - are reagents and one is his special ultimate Invoke.
-            </td>
-         </tr>
-         <tr>
-            <td>Weaver</td>
-            <td>Skitskurr</td>
-            <td>Nerubian weaver</td>
-            <td>Agility</td>
-            <td>3</td>
-            <td>1</td>
-            <td>Undefined</td>
-            <td>Swarm of ants</td>
-            <td>None</td>
-            <td>false</td>
-            <td>Ranged</td>
-            <td>03-01-2005</td>
-            <td>Skitskurr, the Weaver, is a ranged agility hero, renowned for being one of the hardest
-               heroes in the game to properly lock down and kill, despite his extreme fragility.
-               This is mainly due to his low-cooldown Shukuchi ability, which provides him both max
-               movement speed and invisibility when used, making him highly effective at chasing
-               enemies as well as escaping from battle.
-            </td>
-         </tr>
-      </table>
-   </body>
-</html>
+<?php
+$file = 'heroes.xml';
+$schema = 'heroes.xsd';
+$ab = new DOMDocument;
+$ab->load($file);
+
+if($ab->schemaValidate($schema)){
+    print "$file is valid.\n";
+}else{
+    print "$file is invalid.\n";
+}
+?>
